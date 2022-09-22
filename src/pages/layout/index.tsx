@@ -22,8 +22,8 @@ export default () => {
   }
   useEffect(() => {
     if (active) {
-      library?.getBalance(`${account}`).then((result: any)=>{
-        setBalance(fromWei(result.toString()))
+      library?.getBalance(`${account}`).then((balance: any)=>{
+        setBalance(fromWei(balance.toString()))
       })
     }
   }, [ active, account ])
